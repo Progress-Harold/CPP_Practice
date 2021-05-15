@@ -5,12 +5,16 @@
 //  Created by Lee Davis on 5/15/21.
 //
 
-#include <iostream>
 #include <cstdio>
 
-int main() {
-    
-    puts("Hello, World!");
+int main()
+{
+
+    int x;
+    x = 42;
+
+    printf("x is %d\n", x);
+    printf("x is %d\n", x = 73);
     
     return 0;
 }
@@ -41,3 +45,15 @@ int main() {
  Parameters in main(int argc, const char * argv[])
  
  */
+
+int statment()
+{
+
+    int x;
+    x = 42;
+
+    printf("x is %d\n", x);
+    printf("x is %d\n", x = 73);
+    
+    return 0;
+}
