@@ -7,8 +7,7 @@
 
 #include <cstdio>
 
-int main()
-{
+int main() {
     
     return 0;
 }
@@ -179,3 +178,177 @@ int strings()
 }
 
 // conditionals
+int conditional()
+{
+    
+    int x = 42;
+    int y = 90;
+    
+    printf("value is %d\n", x < y);
+    
+    if (x > y) {
+        puts("condition is true");
+    } else {
+        puts("condition is false");
+    }
+    
+    return 0;
+}
+
+// branching conditionals
+
+int switches()
+{
+    const int iONE = 1;
+    const int iTWO = 2;
+    const int iTHREE = 3;
+    const int iFOUR = 4;
+    
+    int x = 3;
+    
+    switch(x) {
+        case iONE:
+            puts("one");
+            break;
+        case iTWO:
+            puts("two");
+            break;
+        case iTHREE:
+            puts("three");
+            break;
+        case iFOUR:
+            puts("four");
+            break;
+        default:
+            break;
+    }
+    
+    return 0;
+}
+
+// whileLoop
+int whileLoop()
+{
+    int array[] = { 1, 2, 3, 4, 5 };
+    int i = 0;
+    
+    while(i < 5) {
+        if (i == 2) {
+            ++i;
+            continue;
+        }
+        printf("element %d is %d\n", i, array[i]);
+        ++i;
+    }
+    
+    
+    do {
+        printf("%i", i);
+    } while (i < 5);
+    
+    return 0;
+}
+
+// itorating with for
+
+int forLoop()
+{
+    char s[] = "string";
+
+    for(char * p = s; *p; ++p) {
+        printf("char us %c\n", *p);
+    }
+
+    int array[] = { 1, 2, 3, 4, 5 };
+
+    for(int i = 0; i < 5; ++i) {
+        printf("element %d is %d\n", i, array[i]);
+    }
+    
+    return 0;
+}
+
+// Range basd for loop for less code
+int rangeBasedForLoop()
+{
+    int array[] = { 1, 2, 3, 4, 5 };
+
+    for(int i : array) {
+        printf("i is %d\n", i);
+    }
+    
+    char s[] = "string";
+    
+    printf("\n\n");
+    
+    for(char c : s) {
+        if (c == 0) break;
+        printf("c is %c\n", c);
+    }
+    
+    return 0;
+}
+
+// Structures
+struct S {
+   int i;
+   double d;
+   const char * s;
+};
+
+int structures() {
+   S s1 = { 3, 47.9, "string one" };
+//    s1.i = 3; // etc is another way
+   
+   printf("s1: %d, %f, %s\n", s1.i, s1.d, s1.s);
+   
+   
+   
+   return 0;
+}
+
+
+// Functions
+
+void funcName() {
+    printf("this is a function()");
+}
+
+void funcName(int i, const char * s) {
+    printf("this is a function with (%i, %s)\n", i, s);
+}
+
+
+int func() {
+    puts("This is in main");
+    funcName();
+    funcName(47, "string");
+    
+    return 0;
+}
+
+// Class
+
+class C {
+private:
+    int i = 0;
+public:
+    void setValue(int value) {
+        i = value;
+    }
+    int getValue() {
+        return i;
+    }
+};
+
+int usingAClasses() {
+    int i = 47;
+    C ol;
+
+    ol.setValue(i);
+
+    printf("value is %d\n", ol.getValue());
+    
+    return 0;
+}
+
