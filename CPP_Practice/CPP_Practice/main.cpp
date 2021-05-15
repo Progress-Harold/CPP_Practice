@@ -9,26 +9,6 @@
 
 int main()
 {
-    int x = 42;
-    int * ip = &x;
-    int & y = x;
-    
-    printf("The value of x is %d\n", x);
-    printf("The value of y is %d\n", y);
-    printf("The value of ip is %d\n\n", *ip);
-    
-    y = 73;
-    
-    printf("The value of x is %d\n", x);
-    printf("The value of y is %d\n", y);
-    printf("The value of ip is %d\n\n", *ip);
-    
-    int z = 7;
-    ip = &z;
-    
-    printf("The value of x is %d\n", x);
-    printf("The value of y is %d\n", y);
-    printf("The value of ip is %d\n", *ip);
     
     return 0;
 }
@@ -143,3 +123,59 @@ int references()
     
     return 0;
 }
+
+// Primative Array
+// items must stay the same type
+// [item, item, item]
+
+/*
+        Size of the array
+        V
+ int ia[5];
+    index
+    V
+ ia[0] || int *ip = 1;
+ int *ip = ia;
+ 
+ incremening value:
+ ++ip
+ 
+ int ia[5] = { 1, 2, 3, 4, 5 };
+ */
+
+int array()
+{
+    int array [] = {1, 2, 3, 4, 5};
+    
+    int x = array[2];
+    
+    printf("x is %d\n", x);
+    array[2] = 47;
+    
+    for(int i : array) {
+        printf("%d ", i);
+    }
+    
+    return 0;
+}
+
+// Primative Strings
+int strings()
+{
+    char s[] = { 'S', 't', 'r', 'i', 'n', 'g' };
+
+    for(int i = 0; s[i] != 0; ++i) {
+        printf("char is %c\n", s[i]);
+    }
+    
+    printf("\n\n");
+    
+    for(char * cp = s; *cp != 0; ++cp) {
+        printf("char is %c\n", *cp);
+    }
+    //    printf("s is %s\n", s);
+    
+    return 0;
+}
+
+// conditionals
